@@ -2,15 +2,34 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    // Retrieve tasks from localStorage on initial render
+    const savedTasks = localStorage.getItem('tasks');
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
   const [newTask, setNewTask] = useState('');
   const [taskDate, setTaskDate] = useState('');
-  const [totalIncome, setTotalIncome] = useState(0);
-  const [totalExpenses, setTotalExpenses] = useState(0);
+  const [totalIncome, setTotalIncome] = useState(() => {
+    // Retrieve totalIncome from localStorage on initial render
+    const savedIncome = localStorage.getItem('totalIncome');
+    return savedIncome ? parseFloat(savedIncome) : 0;
+  });
+  const [totalExpenses, setTotalExpenses] = useState(() => {
+    // Retrieve totalExpenses from localStorage on initial render
+    const savedExpenses = localStorage.getItem('totalExpenses');
+    return savedExpenses ? parseFloat(savedExpenses) : 0;
+  });
   const [incomeAmount, setIncomeAmount] = useState('');
   const [expenseDescription, setExpenseDescription] = useState('');
   const [expenseAmount, setExpenseAmount] = useState('');
   const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    // Save tasks and financial data to localStorage whenever they change
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem('totalIncome', totalIncome);
+    localStorage.setItem('totalExpenses', totalExpenses);
+  }, [tasks, totalIncome, totalExpenses]);
 
   const handleAddTask = (event) => {
     event.preventDefault();
