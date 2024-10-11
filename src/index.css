@@ -157,3 +157,171 @@
 .theme-toggle:hover {
   opacity: 0.8;
 }
+/* General styles */
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.balance-container {
+  margin: 20px 0;
+}
+
+.balance-item {
+  margin: 10px 0;
+}
+
+.balance-amount {
+  font-weight: bold;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.task-list {
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* For Mobile Devices */
+  .app-container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .task-list {
+    padding-left: 0;
+  }
+
+  /* Make sure the date input is more visible */
+  input[type="date"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .task-label {
+    font-size: 14px;
+  }
+
+  .balance-container {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For Small Mobile Devices */
+  .card-title {
+    font-size: 20px;
+  }
+
+  .balance-item {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 8px;
+  }
+
+  .input {
+    font-size: 14px;
+  }
+}
