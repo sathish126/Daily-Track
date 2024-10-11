@@ -68,10 +68,13 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {/* Theme Toggle Button */}
-      <button className="theme-toggle" onClick={toggleTheme}>
-         {theme === 'light' ? 'Dark' : 'Light'} Mode
-      </button>
+      {/* Header Section */}
+      <header className="header">
+        <h1 className="header-title">The Team Fixers</h1>
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {theme === 'light' ? 'Dark' : 'Light'} Mode
+        </button>
+      </header>
 
       {/* To-Do List Section */}
       <div className="card">

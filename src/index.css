@@ -143,20 +143,34 @@
   color: var(--balance-negative-light);
 }
 
+.header {
+   /* Adjust as needed */
+  color: blue; /* Ensure text is readable */
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px; /* Optional: Add some rounding */
+}
+
+.header-title {
+  margin: 0; /* Remove default margin */
+  font-size: 18px; /* Adjust font size as necessary */
+}
+
 .theme-toggle {
-  padding: 10px 20px;
-  background-color: var(--primary-button-light);
-  color: white;
-  font-size: 16px;
+  margin-top: 10px; /* Space between title and button */
+  padding: 10px 15px; /* Add some padding for the button */
+  background-color: #3b82f6; /* Example background color */
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 20px;
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Optional: Add some rounding */
 }
 
 .theme-toggle:hover {
-  opacity: 0.8;
+  background-color: #2563eb; /* Darker shade on hover */
 }
+
+
 /* General styles */
 .app-container {
   padding: 20px;
@@ -325,3 +339,4 @@
     font-size: 14px;
   }
 }
+
