@@ -1,0 +1,159 @@
+/* App.css */
+
+/* Default light theme */
+:root {
+  --background-color-light: #fff;
+  --text-color-light: #000;
+  --primary-button-light: #007bff;
+  --success-button-light: #28a745;
+  --danger-button-light: #dc3545;
+  --card-background-light: #f9f9f9;
+  --card-border-light: #ccc;
+  --input-background-light: #fff;
+  --input-border-light: #ccc;
+  --text-color-light: #333;
+  --balance-positive-light: green;
+  --balance-negative-light: red;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --background-color-light: #121212;
+  --text-color-light: #fff;
+  --primary-button-light: #0069d9;
+  --success-button-light: #218838;
+  --danger-button-light: #c82333;
+  --card-background-light: #333;
+  --card-border-light: #444;
+  --input-background-light: #555;
+  --input-border-light: #666;
+  --text-color-light: #ddd;
+  --balance-positive-light: #28a745;
+  --balance-negative-light: #f44336;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid var(--card-border-light);
+  border-radius: 8px;
+  background-color: var(--card-background-light);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--input-border-light);
+  background-color: var(--input-background-light);
+  color: var(--text-color-light);
+}
+
+.button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.primary {
+  background-color: var(--primary-button-light);
+  color: white;
+}
+
+.button.success {
+  background-color: var(--success-button-light);
+  color: white;
+}
+
+.button.danger {
+  background-color: var(--danger-button-light);
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task.completed .task-label {
+  text-decoration: line-through;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.balance-container {
+  margin-top: 20px;
+}
+
+.balance-item {
+  margin-bottom: 10px;
+}
+
+.balance-amount {
+  font-weight: bold;
+}
+
+.balance-amount.positive {
+  color: var(--balance-positive-light);
+}
+
+.balance-amount.negative {
+  color: var(--balance-negative-light);
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  background-color: var(--primary-button-light);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
