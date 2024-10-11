@@ -70,7 +70,7 @@ const App = () => {
     <div className="app-container">
       {/* Theme Toggle Button */}
       <button className="theme-toggle" onClick={toggleTheme}>
-        Toggle {theme === 'light' ? 'Dark' : 'Light'} Mode
+         {theme === 'light' ? 'Dark' : 'Light'} Mode
       </button>
 
       {/* To-Do List Section */}
